@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model CityModel;
+@{
+    var weather = ViewBag.weatherModel;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<form method="post">
+    <input asp-for=City placeholder="City"/>
+    <input type="submit" value="submit" />
+</form>
+
+<div>
+    @{
+        if(weather != null)
+        {
+            <h1>Location - @weather.Name</h1>
+            <p>Latitude - @weather.Coord.Lat</p>
+            <p>Weather(Kelvin) - @weather.Main.Temp</p>
+            <p>Humidity(%) - @weather.Main.Humidity</p>
+            <p>Wind Speed(m/s) - @weather.Wind.Speed</p>
+            <p>Clouds(%) - @weather.Clouds.All</p>
+            <p>Country - @weather.Sys.Country</p>
+            <p>Sunrise - @weather.Sys.Sunrise</p>
+            <p>Sunset - @weather.Sys.Sunset</p>
+        }
+    }
+    
+</div>

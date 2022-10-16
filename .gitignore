@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/API Consume - Weather/.vs/API Consume - Weather
+/API Consume - Weather/API Consume - Weather/bin/Debug/net5.0
+/API Consume - Weather/API Consume - Weather/obj
